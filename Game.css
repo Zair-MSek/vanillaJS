@@ -1,0 +1,165 @@
+:root {
+    --active-color: rgb(30, 174, 152);
+    --inactive-color: rgb(175, 185, 200);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+section.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    margin-left: auto;
+    margin: 0 100px;
+
+}
+/* instruction rules */
+
+h1 {
+    font-size:x-large;
+    border-bottom: 1px solid #564a4a;
+}
+
+h2 {
+    font-size: larger;
+}
+h1, h2, p, ul {
+    color:#564a4a;
+}
+
+p input {
+    border:none;
+    background-color: #fdfaf6;
+    padding: 5px 2px;
+    border-bottom: 1px solid var(--active-color);
+    width: 300px;
+    display: block;
+    margin: 5px 0;
+}
+
+p input:focus {
+    outline:none;
+    background-color: white;
+}
+
+p button {
+    border: 1px solid var(--active-color);
+    background-color: #e4efe7;
+    color: var(--active-color);
+    border-radius: 5px;
+    display: block;
+    margin: 5px 0;
+}
+
+p button:hover
+,p button:focus {
+    color: white;
+    background-color: var(--active-color);
+}
+
+p.instructions {
+    padding: 5px;
+    margin: 10px 0;
+    border-bottom: 1px solid #e93b81;
+    background-color: #ffe5e2;
+    font-style: italic;
+}
+
+p.instructions span {
+    color: #e93b81;
+    font-weight: bold;
+}
+
+/* game button rules */
+.board button {
+  height: 100px;
+  border: none;
+}
+
+
+.board button:nth-of-type(3n-1)
+,.board button:nth-of-type(3n+1){
+    border-right: 2px solid var(--inactive-color);
+}
+
+.board button:nth-of-type(n+4){
+    border-top: 2px solid var(--inactive-color);
+
+}
+
+button[data-status="open"]{
+    background-color: whitesmoke;
+}
+
+/* the game has started */
+[data-game="start"] button[data-status="open"]{
+    background-color: #fdfaf6;
+}
+
+[data-game="start"] button[data-status="open"]:hover
+,button[data-status="close"]
+,button[data-status="over"] {
+    background-color: white;
+}
+
+[data-game="start"] button:nth-of-type(3n-1)
+,[data-game="start"] button:nth-of-type(3n+1){
+    border-right: 2px solid var(--active-color);
+}
+
+[data-game="start"] button:nth-of-type(n+4){
+    border-top: 2px solid var(--active-color);
+}
+
+button[data-status="winner"]{
+    background-color: #ffe5e2;
+}
+
+button[data-move]{
+    font-size: 50px;
+}
+
+button[data-move="player1"]{
+    color: #005792;
+}
+
+button[data-move="player2"]{
+    color: #99154e;
+}
+
+.hide {
+    display: none;
+}
+
+/* all other */
+
+.keyword {
+    font-weight: bold;
+    background-color: #faf3f3;
+    padding: 0 5px;
+}
+
+.signature a {
+    font-weight: bold;
+    color: #046582;
+}
+
