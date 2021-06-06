@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Game.css" type="text/css">
+    <script src="Game.js" defer></script>
+    <title>Game | Tic-tac-toe</title>
+</head>
+<body>
+    <main>
+
+
+        <article class="game">
+
+            <section class="intro">
+
+                <h1>Vanilla JS: Tic-Tac-Toe</h1>
+
+                <p>
+                    Play a fun game of Tic-Tac-Toe, built using HTML, CSS and plain JavaScript.
+                </p>
+
+                <p>
+                    If this is your first time playing Tic-Tac-Toe, then you're in for much fun. 
+                    To win the game, a player must place three of their marks in a 
+                    horizontal, vertical, or diagonal row. For more info see 
+                    <a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank" title="Open Wikipedia Tic-tac-toe page">Tic-Tac-Toe wiki's page</a>. 
+                </p>
+
+                <h2>Before you start</h2>
+
+                <ul>
+                    <li>
+                        You need to enter names for the first and second player
+                        to activate the game.
+                    </li>
+                    <li>
+                        Once activated, instructions are shown to indicate which player needs
+                        to make a move.
+                    </li>
+                    <li>
+                        To make a move, click on an empty cell. Please note that moves are final
+                        and cannot be reversed.
+                    </li>
+                    <li>
+                        Cells with value "X" represents moves the first player made.
+                    </li>
+                    <li>
+                        Cells with value "O" represents moves the second player made.
+                    </li>
+                </ul>
+
+             
+            </section>
+
+            <section>
+
+                <p class="first-mover">
+                    First player: <input type="text" data-player="1" name="first" placeholder="Please enter your name">
+                    <button id="first-mover">Done!</button>
+                </p>
+
+                <p class="second-mover hide">
+                    Second player: <input type="text" data-player="2" name="second" placeholder="Please enter your name">
+                    <button id="second-mover">Done!</button>
+                </p>
+
+                <p class="instructions hide"></p>
+    
+            </section>
+
+            <section class="board" data-player1="" data-player2="" data-game="" data-move="">
+                <button data-row="1" data-col="1" data-status="open" data-move=""></button>
+                <button data-row="1" data-col="2" data-status="open" data-move=""></button>
+                <button data-row="1" data-col="3" data-status="open" data-move=""></button>
+                <button data-row="2" data-col="1" data-status="open" data-move=""></button>
+                <button data-row="2" data-col="2" data-status="open" data-move=""></button>
+                <button data-row="2" data-col="3" data-status="open" data-move=""></button>
+                <button data-row="3" data-col="1" data-status="open" data-move=""></button>
+                <button data-row="3" data-col="2" data-status="open" data-move=""></button>
+                <button data-row="3" data-col="3" data-status="open" data-move=""></button>
+            </section>
+
+            <aside>
+                <p>
+                    The game makes extense use of the <span class="keyword">dataset</span>
+                    HTML element to capture users' provided information and game outcome. 
+                    You can find information on <span class="keyword">dataset</span> HTML
+                    element on <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/dataset" target="_blank" title="Take me to Mozilla's developer">MDN Web Docs</a>    
+                </p>
+
+                <p>
+                    I will be add accessibility feature and bot player in later iteration.
+                </p>
+
+                <p>
+                    Let me know what you thing of the game and keep coding.
+                </p>
+
+                <p>
+                    P.S: No data is being collected from your use of the game.
+                </p>
+
+                
+                <p class="signature">
+                    <a href="https://github.com/Zair-MSek" title="Find me on Github">Zair-MSek</a> 
+                </p>
+            </aside>
+
+        </article>
+        
+    </main>
+</body>
+</html>
